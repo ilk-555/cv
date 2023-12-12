@@ -44,9 +44,11 @@ body {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        color: #444;
         align-items: center;
-        padding: 30px 40px;
+        padding: 10px 20px;
+        background: #222;
+        position: relative;
+        z-index: 90;
 
         a {
             display: flex;
@@ -66,9 +68,27 @@ body {
                 align-items: center;
             }
         }
+        .menu.active{
+
+            .links{
+                display: flex;
+                top: 100%;
+                width: 200px;
+                background: #333;
+                right: 0;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                ul{
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+        }
 
         .links {
-
+            position: absolute;
+            display: none;
             ul {
                 display: flex;
                 list-style: none;
@@ -99,14 +119,9 @@ body {
             display: flex;
 
             .box1 {
-                width: 40%;
                 display: flex;
                 padding: 30px;
-
-
-                &:first-of-type {
-                    justify-content: end;
-                }
+                flex-wrap: wrap;
 
                 .box {
                     background: #444;
@@ -131,6 +146,7 @@ body {
                 .text {
                     display: flex;
                     gap: 15px;
+                    width: 40%;
                     color: #f5f5f5;
                     flex-direction: column;
 
@@ -222,7 +238,7 @@ body {
                 justify-content: space-between;
                 position: relative;
                 align-items: center;
-                padding: 10px 0;
+                padding: 15px 0;
 
                 &::before {
                     content: '';
@@ -350,6 +366,69 @@ body {
             }
         }
     }
+}
+
+@media (max-width:700px ){
+
+    .navbar{
+        position: sticky !important;
+        top: 0;
+    }
+    .enterance{
+
+        .box1{
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .text{
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .w{
+        .box{
+            flex-direction: column;
+            
+            .card{
+                width: auto !important;
+            }
+        }
+    }
+    .skills-bar{
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact{
+        .box{
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .icons{
+                width: 90% !important;
+            }
+            .form{
+                width: 90% !important;
+                align-items: center;
+
+                .box1{
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+
+                    .input, .text {
+                        width: 100% !important;
+
+                        textarea{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 

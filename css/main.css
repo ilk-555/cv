@@ -39,9 +39,11 @@ body .navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  color: #444;
   align-items: center;
-  padding: 30px 40px;
+  padding: 10px 20px;
+  background: #222;
+  position: relative;
+  z-index: 90;
 }
 body .navbar a {
   display: flex;
@@ -59,6 +61,24 @@ body .navbar a .box {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+body .navbar .menu.active .links {
+  display: flex;
+  top: 100%;
+  width: 200px;
+  background: #333;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+body .navbar .menu.active .links ul {
+  flex-direction: column;
+  gap: 20px;
+}
+body .navbar .links {
+  position: absolute;
+  display: none;
 }
 body .navbar .links ul {
   display: flex;
@@ -85,12 +105,9 @@ body .enterance .box2 {
   display: flex;
 }
 body .enterance .box2 .box1 {
-  width: 40%;
   display: flex;
   padding: 30px;
-}
-body .enterance .box2 .box1:first-of-type {
-  justify-content: end;
+  flex-wrap: wrap;
 }
 body .enterance .box2 .box1 .box {
   background: #444;
@@ -113,6 +130,7 @@ body .enterance .box2 .box1 .box img {
 body .enterance .box2 .box1 .text {
   display: flex;
   gap: 15px;
+  width: 40%;
   color: #f5f5f5;
   flex-direction: column;
 }
@@ -185,7 +203,7 @@ body .skills-bar .coding .bar {
   justify-content: space-between;
   position: relative;
   align-items: center;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 body .skills-bar .lang .bar::before,
 body .skills-bar .coding .bar::before {
@@ -286,6 +304,55 @@ body .contact .box .form button:hover {
   transition: 1s;
 }
 
+@media (max-width: 700px) {
+  .navbar {
+    position: sticky !important;
+    top: 0;
+  }
+  .enterance .box1 {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .enterance .text {
+    align-items: center;
+    justify-content: center;
+  }
+  .w .box {
+    flex-direction: column;
+  }
+  .w .box .card {
+    width: auto !important;
+  }
+  .skills-bar {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .box {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .box .icons {
+    width: 90% !important;
+  }
+  .contact .box .form {
+    width: 90% !important;
+    align-items: center;
+  }
+  .contact .box .form .box1 {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact .box .form .box1 .input, .contact .box .form .box1 .text {
+    width: 100% !important;
+  }
+  .contact .box .form .box1 .input textarea, .contact .box .form .box1 .text textarea {
+    width: 100%;
+  }
+}
 @keyframes input {
   0% {
     right: 100%;

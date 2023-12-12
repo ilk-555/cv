@@ -4,5 +4,8 @@ function blue(e){
 
 function ren(e){
 e.classList.remove('active')
-}
+};
 
+function klik(e){
+    e.classList.add('active')
+}
