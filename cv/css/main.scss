@@ -12,7 +12,9 @@ a {
 section .heading h2 {
     position: relative;
     display: inline;
+    color: #f5f5f5;
     padding: 5px 0;
+    font-size: 1.6em;
 
 
     &::before {
@@ -36,6 +38,12 @@ section .heading h2 {
         background: #007ced;
     }
 }
+section{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+    padding: 20px 0;
+}
 
 body {
     background: #222222;
@@ -45,9 +53,8 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px;
+        padding:20px;
         background: #222;
-        position: relative;
         z-index: 90;
 
         a {
@@ -94,22 +101,14 @@ body {
     }
 
     .enterance {
-        display: flex;
-        width: 80%;
-        justify-content: center;
-        align-items: center;
-        margin-top: 60px;
 
         .box2 {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-        
-
                 
             .box1 {
-                width: 45%;
+                width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -117,8 +116,8 @@ body {
                 .box {
                     background: #444;
                     border-radius: 50%;
-                    width: 250px;
-                    height: 250px;
+                    width: 300px;
+                    height: 300px;
                     padding: 15px;
                     display: flex;
                     border: 1px solid black;
@@ -137,7 +136,8 @@ body {
                 .text {
                     display: flex;
                     gap: 15px;
-                    width: 45%;
+                    padding: 20px;
+                    width: 100%;
                     color: #f5f5f5;
                     flex-direction: column;
 
@@ -170,56 +170,44 @@ body {
         
 
     .w {
-        width: 80%;
-        margin: auto;
-        margin-top: 60px;
-        color: #f5f5f5;
-
+        .heading{
+        padding: 5px 20px;
+       }
         .box {
             display: flex;
             flex-wrap: wrap;
 
             .card {
                 display: flex;
+                padding: 20px;
+                gap: 7px;
                 width: 50%;
-
-                     .text {
-
+                flex-direction: column;
+                     
                 .card-icon {
-                    .svg-inline--fa {
-                    font-size: 2em;
-                    }
-                }
-
-               
-                    padding: 20px 0;
                     display: flex;
                     gap: 10px;
-                    flex-direction: column;
+                    font-size: 1.3em;
 
                     h3 {
                         color: #f5f5f5;
                     }
-
+                }
                     p {
                         color: #d5d5d5;
                     }
-                }
             }
         }
     }
 
     .skills-bar {
-        width: 80%;
-        margin: auto;
-        gap: 40px;
         display: flex;
         color: #f5f5f5;
-        margin-top: 60px;
 
         .lang,
         .coding {
             display: flex;
+            padding: 20px;
             width: 50%;
             flex-direction: column;
 
@@ -261,17 +249,15 @@ body {
     .contact {
         display: flex;
         flex-direction: column;
-        width: 80%;
-        margin: auto;
-        margin-top: 60px;
+        gap: 20px;
+        padding: 20px;
 
         .box {
             display: flex;
-            width: 100%;
 
             .icons {
-                width: 50%;
-                padding: 10px;
+                width: 100%;
+                padding: 0 20px 0 0;
 
                 .icon {
                     display: flex;
@@ -298,10 +284,10 @@ body {
             }
 
             .form {
-                width: 50%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
-                padding: 35px 0;
+                padding: 20px 0;
                 gap: 30px;
 
                 .box1 {
@@ -322,10 +308,10 @@ body {
                             border: 2px solid #555;
                             background: transparent;
                             border-radius: 6px;
+                            width: 100%;
                             padding: 15px;
                             outline: none;
                             color: #fff;
-                            position: relative;
                             
                         }
 
@@ -358,125 +344,41 @@ body {
         }
     }
 }
-
-@media (max-width:800px){
-    .contact{
-        display: flex;
-        .box{
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-           
-            .icons{
-                width: 90% !important;
-                flex-direction: column;
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-            .form{
-                width: 90% !important;
-                align-items: center;
-
-                .box1{
-                    flex-direction: column !important;
-                    align-items: center;
-                    justify-content: center;
-
-                    .input, .text {
-                        width: 100% !important;
-
-                    }
-                   textarea{
-                            width: 100% !important;
-                        } 
-                }
-            }
-        }
-    }
+@media (max-width:750px){
     .navbar{
-        position: sticky !important;
+        position: sticky;
         top: 0;
-        display: flex !important;
-
+        
         .menu{
+            .drop-menu{
+                display: flex !important;
+                font-size: 2em;
+            }
             .links{
-                display: none;
-            }
-            .fa-bars{
-            display: flex !important;
-            }
+                    display: none ;
+                    ul{
+                        flex-direction: column;
+                    }
+                }
         }
         .menu.active{
+
             .links{
                 display: flex;
-            }
-        
-        .links{
-            display: flex;
-            top: 100%;
-            width: 200px;
-            background: #333;
-            right: 0;
-            position: absolute;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            ul{
-                flex-direction: column;
-                gap: 20px;
-            }
-        }
-    }         
-
-    }
-
-}
-
-@media (max-width:700px ){
-
-
-    .enterance{
-
-        .box1{
-            width: 80% !important;
-            
-        }
-        .text{
-            align-items: center;
-            justify-content: center;
-            width: 80% !important;
-        }
-    }
-    .w{
-        .box{
-            flex-direction: column;
-            
-            .card{
-                width: auto !important;
-            }
-        }
-    }
-    .skills-bar{
-        flex-direction: column !important;
-        justify-content: center;
-        align-items: center;
-    }
-   
-
-}
-
-@media (max-width:380px){
-    .enterance{
-        .box1{
-            .box{
-
-                width: 200px !important;
-                height: 200px !important;
+                align-items: center;
+                justify-content: center;
+                padding: 20px 0;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 200px;
+                z-index: 999;
+                background: #333333;
             }
         }
     }
 }
+
 
 
 @keyframes input {
