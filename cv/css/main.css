@@ -165,6 +165,7 @@ body .w .box .card p {
 body .skills-bar {
   display: flex;
   color: #f5f5f5;
+  flex-wrap: wrap;
 }
 body .skills-bar .lang,
 body .skills-bar .coding {
@@ -305,6 +306,72 @@ body .contact .box .form button:hover {
     width: 200px;
     z-index: 999;
     background: #333333;
+  }
+  .enterance {
+    padding: 30px;
+  }
+  .enterance .box2 {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .enterance .box2 .text {
+    padding: 0 !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .w {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+  }
+  .w .heading {
+    padding: 0 !important;
+  }
+  .w .box {
+    gap: 30px;
+  }
+  .w .box .card {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .skills-bar {
+    padding: 30px;
+    gap: 40px;
+  }
+  .skills-bar .lang,
+  .skills-bar .coding {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .contact {
+    padding: 30px !important;
+  }
+  .contact .box {
+    flex-wrap: wrap;
+  }
+  .contact .box .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact .box .form {
+    align-items: center;
+    justify-content: center;
+  }
+  .contact .box .form .box1 {
+    width: 100%;
+    flex-direction: column;
+  }
+  .contact .box .form .box1 .input, .contact .box .form .box1 .text {
+    width: 100% !important;
+  }
+}
+@media (max-width: 350px) {
+  .enterance .box2 .box1 .box {
+    width: 200px !important;
+    height: 200px !important;
   }
 }
 @keyframes input {
